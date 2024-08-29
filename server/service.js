@@ -22,7 +22,7 @@ const connectDB = async (req, res) => {
 const getProducts = async (req, res) => {
     try{
         const productList =  await products.find({}).toArray();
-        res.status(200).json({ productList });
+        res.status(200).json( productList );
     }
     catch (err) {
         handleError(res, 'Failed to fetch products');
